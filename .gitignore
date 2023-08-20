@@ -1,0 +1,13 @@
+.idea
+.pytest_cache
+__pycache__/
+.DS_Store
+.env
+/venv/
+/allure_results
+*.py[cod]
+*$py.class
+experimental.py
+allure_reports
+allure_report
+temp_files
