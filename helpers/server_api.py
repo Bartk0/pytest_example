@@ -1,4 +1,5 @@
 import requests
+from re import findall
 
 
 class ApiConsts:
@@ -79,6 +80,9 @@ class CommonMethods:
         self.ApiConsts = ApiConsts
 
     def get_invalid_path(self):
-        response = requests.get(url=self.base_url)
+        response = requests.get(url=f'{self.base_url}/some_bad_path')
         assert response.status_code == 200
         return response.json()
+
+    def get_valid_paths_list(self):
+        return findall(r'/[a-z]*', self.get_invalid_path()[ApiConsts.MSG])

@@ -3,7 +3,7 @@ import pytest
 from hamcrest import assert_that
 
 
-@pytest.mark.smoke
+@pytest.mark.json
 @pytest.mark.order('last')
 @allure.testcase('Write data id', name='Write data id')
 @allure.description('Write json data and assert id in it')
